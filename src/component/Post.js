@@ -1,10 +1,10 @@
 import React from 'react'
-
-export default function Post({match}) {
-    const {params} = match
+import { useParams } from 'react-router'
+export default function Post() {
+    const {category} = useParams
     return (
         <div>
-            this is a post component {params.category}
+            this is a post component {category}
         </div>
     )
 }
